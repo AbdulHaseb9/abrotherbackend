@@ -13,9 +13,7 @@ const register = async (req, resp) => {
           .json("This email is already associated with an account.");
       } else {
         const hashpassword = await bcrypt.hash(
-          password,
-          process.env.bcryptsalt
-        );
+          password, 7 );
         const saveuser = new user({
           name,
           emailorphone,
