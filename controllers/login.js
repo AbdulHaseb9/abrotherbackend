@@ -12,7 +12,7 @@ const login = async (req, resp) => {
           finduser.password
         );
         if (comparepassword) {
-          resp.status(202).json("Login Successfully");
+          resp.status(202).json(finduser);
         } else {
           resp.status(400).json("Invalid Credentials");
         }
