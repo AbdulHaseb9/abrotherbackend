@@ -17,7 +17,7 @@ const login = async (req, resp) => {
           resp.status(400).json("Invalid Credentials");
         }
       } else {
-        resp.json("email not found");
+        resp.status(400).json("email not found");
       }
     } else {
       resp.status(400).jso("please fill all fields properly");
